@@ -34,7 +34,28 @@ function readLine() {
 
 function birthday(s, d, m) {
     // Write your code here
-    
+    let count = 0;
+    if(m == 1){
+        d == s[0] ? count ++ : console.log('wrong')
+    }else{
+        let init = 0;
+        let final = m;
+        let sum = 0;
+        
+        while(final <= s.length){
+            for(let i = init; i < final; i++){
+                sum += s[i];
+            }
+            if( sum == d){
+                count ++;
+            }
+            sum = 0;
+            init++;
+            final++;
+        }
+           
+    }
+    return count;
 }
 
 function main() {
